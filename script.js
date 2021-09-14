@@ -139,10 +139,11 @@ for (let i = 0; i < updateCartItemButtons.length; i++) {
 }
 
 
-const cartRows = document.getElementsByClassName("cartrow")
+
 
 function updateCartTotal() {
     let total = 0
+    const cartRows = document.getElementsByClassName("cartrow")
     for (let i = 0; i < cartRows.length; i++) {
         let cartRow = cartRows[i]
         let priceEl = cartRow.getElementsByClassName("price-el")[0]
@@ -179,4 +180,27 @@ function emptyCart() {
  
 }
 
+
+// ---------- FUNCTION BUTTONS ----------
+let healthButton = document.querySelector(".healthbtn")
+let optionsPage = document.querySelector(".healthcontainer")
+
+console.log(healthButton)
+console.log(optionsPage)
+
+healthButton.addEventListener('click', nextPage)
+
+
+function nextPage() {
+    document.querySelector(".herocontainer").classList.add("hide")
+    optionsPage.classList.add("show")
+}
+
+function back() {
+    document.querySelector(".herocontainer").classList.remove("hide")
+    optionsPage.classList.remove("show")
+}
+
+
+document.querySelector(".back").addEventListener('click', back)
 

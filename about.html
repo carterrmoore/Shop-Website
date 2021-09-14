@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Coustard:wght@900&display=swap" rel="stylesheet">
 
-    <title>About</title>
+    <title>Function Test</title>
 </head>
 <body>
  <header>
@@ -35,28 +35,62 @@
     </nav>
 </header>
 
-<div class="container">
+<div class="herocontainer">
     <div class="hero">
         <h1>How Can We Help?</h1>
-        <h2>I would like to improve my <a href="#" class="cyclebtn">cycle</a></h2>
-        <h2>I would like to improve my <a href="#" class="healthbtn">health</a></h2>
+        <div class="heroquestion">
+            <h3>I would like to improve my:</h3>
+            <button class="healthbtn">health</button>
+        </div>
+
     </div>
 </div>
 
-<div class="container">
+<div class="healthcontainer">
+    <button aria-label="Back" class="back btn"> < Back</button>
+
     <div class="hero">
         <h1>Great!</h1>
-        <h2>Anything specific in your health?</h2>
+        <h2>How would you like to improve your health?</h2>
         <div class="health">
             <a href="products.html" class="stress btn">Stress</a>
-            <a href="" class="sleep btn">Sleep</a>
-            <a href="" class="fitness btn">Fitness</a>
-            <a href="" class="fitness btn">Shop All</a>
+            <a href="products.html" class="sleep btn">Sleep</a>
+            <a href="products.html" class="fitness btn">Fitness</a>
+            <a href="products.html" class="fitness btn">Shop All</a>
 
         </div>
     </div>
 </div>
 
+<div class="shopping-cart">
+    <button aria-label="Open Shopping Cart" class="open-cart btn">Show Cart</button>
+
+</div>
+
+<div class="main-cart">
+    <button aria-label="Close Shopping Cart" class="close-cart">&times;</button>
+
+    <div class="cart-container">
+        <div class="cartheader">
+            <p>Item</p>
+            <p>Price</p>
+            <p>Quantity</p>
+    
+        </div>
+        <div class="cart">
+    
+        </div>
+        <div class="cart-total">
+            <p class="cart-total-title">Total </p>
+            <p class="cart-total-price"></p>
+    
+        </div>
+        <div class="purchase">
+            <button class="purchasebtn btn">Purchase</button>
+        </div>
+    </div>
+
+</div>
 
 
 
