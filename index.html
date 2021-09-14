@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coustard:wght@900&display=swap" rel="stylesheet">
+
+    <title>Home Page</title>
+</head>
+<body>
+
+                <!-- NAVBAR -->
+
+ <header>
+        <div class="logo">
+            <a class="logolink" href="index.html"><h1>Logo</h1></a>
+            <button aria-label="Open navigation" class="open-nav">&#8801;</button>
+        </div>
+        
+
+    <nav class="nav">
+             <button aria-label="Close navigation" class="close-nav">&times;</button>
+        
+            <ul class="navlist">
+                <a href="products.html" class="navlink">Products</a>
+                <a href="about.html" class="navlink">About</a>
+                <a href="contact.html" class="navlink">Contact</a>
+                <!-- <a aria-label="Open Shopping Cart" class="open-cart navlink">Show Cart</a> -->
+
+            </ul>
+    </nav>
+</header>
+
+                <!-- HERO -->
+
+<div class="container">
+    <div class="hero">
+        <h1>Company Name</h1>
+        <h3>Description of the company and why you should like it</h3>
+    </div>
+</div>
+
+
+                <!-- PRODUCTS -->
+
+
+<div class="mainproducts">
+    <div class="shop-product">
+        <img class="shop-item-img" src="images/seamossgel.png" alt="">
+        <h1><span class="shop-item-title">Special Sea Moss</span></h1>
+        <h4 class="shop-item-des">Description of the Special Sea Moss</h4>
+        <h4><span class="shop-item-price">Price: $99</span></h4>
+        <button class="addtocart btn">Add To Cart</button>
+    </div>
+
+    <div class="shop-product">
+        <img class="shop-item-img" src="images/seamossgel-purple.png" alt="">
+        <h1><span class="shop-item-title">Elderberry Sea Moss</span></h1>
+        <h4 class="shop-item-des">Description of the Special Sea Moss</h4>
+        <h4><span class="shop-item-price">Price: $55</span></h4>
+        <button class="addtocart btn">Add To Cart</button>
+    </div>
+
+
+<div class="shop-product">
+    <img class="shop-item-img" src="images/seamossgel-green.png" alt="">
+    <h1><span class="shop-item-title">Burdock & Bladderack Sea Moss</span></h1>
+    <h4 class="shop-item-des">Description of the Special Sea Moss</h4>
+    <h4><span class="shop-item-price">Price: $25</span></h4>
+    <button class="addtocart btn">Add To Cart</button>
+</div>
+</div>
+
+<div class="shopping-cart">
+    <button aria-label="Open Shopping Cart" class="open-cart btn">Show Cart</button>
+
+</div>
+
+<div class="main-cart">
+    <button aria-label="Close Shopping Cart" class="close-cart">&times;</button>
+
+    <div class="cart-container">
+        <div class="cartheader">
+            <p>Item</p>
+            <p>Price</p>
+            <p>Quantity</p>
+    
+        </div>
+        <div class="cart">
+    
+        </div>
+        <div class="cart-total">
+            <p class="cart-total-title">Total </p>
+            <p class="cart-total-price"></p>
+    
+        </div>
+        <div class="purchase">
+            <button class="purchasebtn btn">Purchase</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

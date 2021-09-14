@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coustard:wght@900&display=swap" rel="stylesheet">
+
+
+    <title>Contact</title>
+</head>
+<body>
+ <header>
+        <div class="logo">
+            <a class="logolink" href="index.html"><h1>Logo</h1></a>
+            <button aria-label="Open navigation" class="open-nav">&#8801;</button>
+        </div>
+        
+
+    <nav class="nav">
+        <button aria-label="Close navigation" class="close-nav">&times;</button>
+        
+            <ul class="navlist">
+                <a href="products.html" class="navlink">Products</a>
+                <a href="about.html" class="navlink">About</a>
+                <a href="contact.html" class="navlink">Contact</a>
+                <!-- <a aria-label="Open Shopping Cart" class="open-cart navlink">Show Cart</a> -->
+            </ul>
+    </nav>
+</header>
+
+<container class="formcontainer">
+    <div class="form">
+        <h1 class="contactheader">Contact</h1>
+        <form id="new-contact">
+            <label for="fname">First Name:</label>
+            <input id="fname" type="text" />
+
+            <label for="lname">Last Name:</label>
+            <input id="fname" type="text" />
+
+            <label for="email">Email:</label>
+            <input id="email" type="email" />
+
+            <label for="message">I would like help with...</label>
+            <textarea id="message"></textarea>
+            <a class="contactbtn btn">Send</a>
+        </form>
+
+    </div>  
+
+</container>
+
+
+<script src="script.js"></script>
+</body>
+</html>
