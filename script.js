@@ -27,6 +27,8 @@ function ready() {
 
 }
 
+let inCartItems = []
+
 // OPEN & CLOSE CART
 
 const closeCartBtn = document.querySelector('.close-cart')
@@ -41,6 +43,7 @@ closeCartBtn.addEventListener("click", function() {
 openCartBtn.addEventListener("click", function() {
     cart.classList.add('shopping-cart-open')
     console.log('open clicked')
+    console.log(inCartItems)
 
 })
 
@@ -77,13 +80,15 @@ function addItemToCart(title, price, shopImg) {
     }
     alert(`${title} has been added to your cart!`)
 
+    inCartItems.push({title, price, shopImg})
+
     let cartRowContents = `
     <div class="cartrow">
         <div class="cartitem">
-            <img class="cartimg" src="${shopImg}" alt="cart item" />
-            <p>${title}</p>
+            <img class="cartimg" src="${inCartItems[inCartItems.length -1].shopImg}" alt="cart item" />
+            <p class="title-el">${inCartItems[inCartItems.length -1].title}</p>
         </div>
-            <p class="price-el">$ ${price}</p>
+            <p class="price-el">$ ${inCartItems[inCartItems.length -1].price}</p>
         <div class="quantity-buttons">
             <input type="number" class="quanity-el" min="1" max="99" value="1" />
             <button class="cartupdatebtn btn">update</button>
@@ -124,10 +129,14 @@ for (let i = 0; i < removeCartItemButtons.length; i++) {
 
 function removeCartItem(e) {
     let buttonClicked = e.target
+            let cartTitle = buttonClicked.parentElement.parentElement.querySelector(".title-el").innerText
+            const result = inCartItems.find( ({ title }) => title === cartTitle)
+            let index = inCartItems.indexOf(result)
+            inCartItems.splice(index, 1)
+            console.log(inCartItems)
             buttonClicked.parentElement.parentElement.remove()
-            console.log('clicked!')
             updateCartTotal()
-}
+        }
 
 // UPDATE CART
 
@@ -182,25 +191,55 @@ function emptyCart() {
 
 
 // ---------- FUNCTION BUTTONS ----------
-let healthButton = document.querySelector(".healthbtn")
-let optionsPage = document.querySelector(".healthcontainer")
+// let healthButton = document.querySelector(".healthbtn")
+// let optionsPage = document.querySelector(".healthcontainer")
 
-console.log(healthButton)
-console.log(optionsPage)
+// console.log(healthButton)
+// console.log(optionsPage)
 
-healthButton.addEventListener('click', nextPage)
-
-
-function nextPage() {
-    document.querySelector(".herocontainer").classList.add("hide")
-    optionsPage.classList.add("show")
-}
-
-function back() {
-    document.querySelector(".herocontainer").classList.remove("hide")
-    optionsPage.classList.remove("show")
-}
+// healthButton.addEventListener('click', nextPage)
 
 
-document.querySelector(".back").addEventListener('click', back)
+// function nextPage() {
+//     document.querySelector(".herocontainer").classList.add("hide")
+//     optionsPage.classList.add("show")
+// }
 
+// function back() {
+//     document.querySelector(".herocontainer").classList.remove("hide")
+//     optionsPage.classList.remove("show")
+// }
+
+
+// document.querySelector(".back").addEventListener('click', back)
+
+// ---------- STRIPE ------------
+let title = inCartItems.title
+let priceEl = document.getElementsByClassName("price-el")[0]
+let quantityEl = document.getElementsByClassName("quanity-el")[0]
+const buttonEl = document.getElementById("purchasebtn")
+console.log(buttonEl)
+buttonEl.addEventListener("click", async () => {
+    console.log(inCartItems)
+
+  console.log('start')
+const res = await fetch("v1/checkout/sessions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      items: [
+        { id: 1, quantity: 3, unit_amount: inCartItems[0].price, name: inCartItems[0].title},
+        { id: 2, quantity: 2, unit_amount: inCartItems[1].price, name: inCartItems[1].title},
+      ],
+    }),
+  })
+    const data = await res.json()
+
+    let url = data.url
+    window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
