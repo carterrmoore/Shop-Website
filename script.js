@@ -223,7 +223,7 @@ buttonEl.addEventListener("click", async () => {
     console.log(inCartItems)
 
   console.log('start')
-const res = await fetch("v1/checkout/sessions", {
+const res = await fetch("/create-checkout-session", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
