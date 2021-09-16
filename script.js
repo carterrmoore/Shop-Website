@@ -223,7 +223,7 @@ buttonEl.addEventListener("click", async () => {
     console.log(inCartItems)
 
 console.log('start')
-const res = await fetch("/create-checkout-session", {
+const res = await fetch('https://api.stripe.com/v1/checkout/sessions', {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -271,7 +271,7 @@ let storeItems = new Map([
 
 const stripe = require('stripe')('sk_test_51Ja35HDGZ72Fm55g8XHjetsB6ZbMpFdM2eHo3ojN9lsDXH6gmUtAzItVORrDDEsR6xSYBJtgv94nOuQi047p1YW400llKEaNj7');
 
-app.post('/create-checkout-session', async (req, res) => {
+app.post('https://api.stripe.com/v1/checkout/sessions', async (req, res) => {
   try {
     console.log('try')
     const session = await stripe.checkout.sessions.create({
