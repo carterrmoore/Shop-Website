@@ -236,8 +236,8 @@ const res = await fetch("/create-checkout-session", {
       ],
     }),
   })
-    const data = await res.json()
-
+    const data = await res.text()
+    console.log(data)
     let url = data.url
     window.location = url
     })
