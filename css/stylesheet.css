@@ -18,7 +18,9 @@ Bright: #23d0d0ff
 /* //// NAVBAR //// */
 
 header {
-    background-color: #9f4696ff;
+    background: rgb(35,208,208);
+background: linear-gradient(90deg, rgba(35,208,208,1) 0%, rgba(255,82,163,1) 69%, rgba(159,70,150,1) 100%);
+    /* background-color: #9f4696ff; */
     margin-top: 0;
 }
 
