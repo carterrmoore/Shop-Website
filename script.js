@@ -1,15 +1,29 @@
+
+
+
 // ---------- NAVBAR ----------
 
 const closeBtn = document.querySelector('.close-nav')
 const openBtn = document.querySelector('.open-nav')
 const nav = document.querySelector('.nav')
+const colorNavOne = document.querySelector('.colornavone')
+const colorNavTwo = document.querySelector('.colornavtwo')
+
 
 closeBtn.addEventListener("click", function() {
     nav.classList.remove('navigation-open')
+    colorNavOne.classList.remove('colornav-open')
+    colorNavTwo.classList.remove('colornavtwo-open')
+
+
 })
 
 openBtn.addEventListener("click", function() {
+    console.log('clicked')
     nav.classList.add('navigation-open')
+    colorNavOne.classList.add('colornav-open')
+    colorNavTwo.classList.add('colornavtwo-open')
+
 })
 
 
@@ -220,6 +234,7 @@ let quantityEl = document.getElementsByClassName("quanity-el")[0]
 const buttonEl = document.getElementById("purchasebtn")
 console.log(buttonEl)
 buttonEl.addEventListener("click", async () => {
+    alert("Thank you for your purchase!")
     console.log(inCartItems)
 
 console.log('start')
@@ -245,10 +260,10 @@ const res = await fetch('/create/checkout/sessions', {
       console.error(e.error)
     })
 
-    // ============== SERVER ++++++++++++++++
+//     // ============== SERVER ++++++++++++++++
 
 
-    require('dotenv').config()
+require('dotenv').config()
 // const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
 // const stripeSecretKey = process.env.STRIPE_SECRET_KEY
 // const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
@@ -275,7 +290,7 @@ const stripe = Stripe('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 app.post('/create/checkout/sessions', async (req, res) => {
   try {
     console.log('try')
-    const session = await Stripe.checkout.sessions.create({
+    const session = await stripe.checkout.sessions.create({
         success_url: 'https://example.com/success',
         cancel_url: 'https://example.com/cancel',
         payment_method_types: ['card'],
