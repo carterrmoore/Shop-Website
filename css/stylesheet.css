@@ -23,7 +23,7 @@ header {
     width: 100%;
     background: hsla(0, 0%, 100%, 0.293);
     margin-top: 0;
-    /* box-shadow: 0px 0px 7px #888787; */
+    /* box-shadow: 0px 0px 7px #ababab81; */
 
     
 }
@@ -38,7 +38,7 @@ header {
 .logolink {
     text-decoration: none;
     /* font-size: 1.1rem; */
-    color: #3917caff;
+    color: #fecc74ff;
     /* color: #fff; */
     font-family: 'Coustard', serif;
 
@@ -189,11 +189,11 @@ header {
 .open-nav {
     border: 0;
     background: 0;
-    color: #3917caff;
+    color: #fecc74ff;
     cursor: pointer;
     padding: .5em;
     margin-left: auto;
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 /* .open-nav:hover,
@@ -224,7 +224,7 @@ header {
     }
 
     .logolink {
-        text-shadow: 0px 0px 10px #cfcfcf8a;
+        text-shadow: 0px 0px 1px #000000;
 
     }
 
@@ -277,7 +277,7 @@ header {
     }
 
     .open-nav {
-        text-shadow: 0px 0px 10px #cfcfcf8a;
+        text-shadow: 0px 0px 1px #000000;
     }
 
    
@@ -291,7 +291,7 @@ header {
     margin: 0;
     display: flex;
     align-content: center;
-    background: linear-gradient(180deg, #fecc74ff 0%, rgb(255, 82, 163) 55%, rgb(55, 22, 202) 100%);
+    background: linear-gradient(0deg, #fecc74ff 0%, rgb(255, 82, 163) 55%, rgb(55, 22, 202) 100%);
 
 }
 
@@ -353,19 +353,19 @@ header {
 }
 
 .bodychild1 {
-    background-color: #3917caff;
-    padding: 100px 20px;
-    color: #fff;
-}
-
-.bodychild2 {
     background-color: #fecc74ff;
     padding: 100px 20px;
     /* color: #fff; */
 }
 
+.bodychild2 {
+    color: #ff52a3;
+    padding: 100px 20px;
+    /* color: #fff; */
+}
+
 .bodychild3 {
-    background-color: #ff52a3;
+    background-color: #3917caff;
     padding: 100px 20px;
     color: #fff;
 }
@@ -390,7 +390,7 @@ header {
 }
 
 .shop-item-img {
-    max-width: 85%;
+    max-width: 65%;
 }
 
 
@@ -655,19 +655,20 @@ input {
 }
 
 .bodychild1 {
-    padding: 150px 100px;    
+    padding: 150px 200px;    
     padding-top: 200px;
-    margin-bottom: 100px;
+    /* margin-bottom: 150px; */
+    
 }
 
 .bodychild2 {
-    padding: 150px 100px;    
-    margin-bottom: 100px;
+    padding: 150px 200px;    
+    /* margin-bottom: 150px; */
 }
 
 .bodychild3 {
-    padding: 150px 100px;    
-    margin-bottom: 100px;
+    padding: 150px 200px;    
+    margin-bottom: 200px;
 }
 
 
