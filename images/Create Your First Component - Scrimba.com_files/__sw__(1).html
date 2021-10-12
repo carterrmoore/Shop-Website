@@ -1,0 +1,6 @@
+
+<!-- saved from url=(0035)https://scrimba.com/__sw__.html?cw8 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><div class="e-bn"><script class="e-bo" type="text/javascript">
+(()=>{var r=Symbol.for("#__init__"),l=Symbol.for("#__initor__"),d=Symbol.for("#__inited__"),g=new class{[r](e=null){this.registration=e?e.registration:void 0}constructor(){this[r](),this.sw=window.navigator.serviceWorker,this.register()}register(){return this.setup()}log(...e){return console.log("Bridge",...e)}async setup(){var e=this;return window.addEventListener("message",function(t){if(e.sw.controller)return e.sw.controller.postMessage(t.data)}),e.sw.addEventListener("message",function(t){return window.parent.postMessage(t.data,"*")}),await e.createServiceWorker()}async createServiceWorker(){if(!this.sw)throw new Error("Service workers are not supported");let e=await this.sw.getRegistration("/");return e?await e.update():e=await this.sw.register("/__sw__worker.js",{scope:"/"}),this}};})();
+//__FOOT__
+</script></div></body></html>
